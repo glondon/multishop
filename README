@@ -1,0 +1,42 @@
+==============================================================================================
+Php-MultiShop 0.8, based on PHP-Nuke version 7.8 (with patch 3.1) and osCommerce Milestone 2.2
+==============================================================================================
+
+Welcome to Php-MutiShop!
+
+Php-MultiShop is a CMS & e-Commerce System, an OpenSource platform 
+to realize a virtual mall that includes various shops and contents.
+The user will have a global vision of the portal, to read the most 
+interesting content (news, forums, curiosities, suggestions, reviews, 
+cultural or commercial events, fairs, recipes, tourist itineraries,...) 
+and to have the possibility to visit the shop that prefers. 
+
+Every shop will have all the functionalities and the personalizations 
+of a traditional e-commerce web-site, as if it were independent from 
+the virtual mall. It will have the own internet domain and could be 
+administrated in full autonomy by the own administrator.
+At the same time, it could be distinct from the mall and other shops 
+thanks to the personalized graphic, the own style, organization, 
+contents and products, as well as every shop into a real market place.
+Besides, being part of a large place able to attract different typologies 
+of visitors and consumers, it will be visible and easily attainable, 
+increasing the own audience and potential market. 
+
+Php-MultiShop is written in PHP, run on Apache webserver and MySQL 
+database server, is able to run on any environment PHP and MySQL, 
+including Linux, Solaris, BSD, Mac OS X, and Microsoft Windows environments. 
+To realize the portal is used the popular CMS PhpNuke, and for every shop 
+the efficient suite e-commerce osCommerce.  
+  
+Php-MutiShop platform, both the used Php-Nuke and osCommerce packages, 
+is Free Software and is released under the GNU/GPL license.
+Please, read the Copyright Policy available on:
+	http://php-multishop.com/copyright-policy.php
+
+For suggestions, observations or active share to the project, 
+you can write to me:
+	http://php-multishop.com/contact.php
+
+and good job,
+
+Piero Trono

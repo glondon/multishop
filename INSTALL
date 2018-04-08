@@ -1,0 +1,108 @@
+==============================================================================================
+Php-MultiShop 0.8, based on PHP-Nuke version 7.8 (with patch 3.1) and osCommerce Milestone 2.2
+==============================================================================================
+
+=================
+FULL INSTALLATION
+=================
+Php-MultiShop is Free Software to build a Virtual Mall:
+a Web Marketplace in which there are two components:
+- the 'portal-side': a Content Management System based on PhpNuke,
+  in other words, the central and required component of the platform,
+- the 'store-side': it's the e-commerce component, based on osCommerce,
+  to build one store (or many independent stores).
+The first and required component is the portal-side.
+After, if you want to do e-commerce, you can install the store-side.
+Departing from the package you can make a full installation
+(first the portal-side, after the store-side) or,
+if already you have a PhpNuke portal installed on your server, you can install
+Php-MultiShop as Add-on of your portal.
+In facts, Php-MultiShop works as Add-on on PhpNuke.
+
+Some details:
+the DB of the platform is one, the same for the CMS and the stores,
+with the following structure:
+- the portal tables names start with a 'portal-prefix' (for example, the default is 'nuke')
+- the table names of every store start with the 'store-prefix' (e.g.: shop1, shop2, bookshop, jewellershop,...)
+- other tables without 'prefix' are shared among the portal and the stores.
+
+
+-------------------
+PORTAL INSTALLATION
+-------------------
+The first step is the installation of the portal ('portal/' folder).
+Copy the content of 'portal/' folder where you want, for example:
+
+	mkdir /var/www/your-portal-dir
+	cp -R Php-MultiShop/portal/*   /var/www/your-portal-dir/
+	
+There are 2 ways to install the portal: 
+
+a) through the web installer interface: go to the 'install' folder via web and follow the instructions
+	http://your-webportal.com/install/
+or
+
+b) manually: read the file docs/portal/INSTALL.
+
+If you already have installed a PHPNuke portal, read the
+file 'Multishop_as_Addon/README.txt'
+
+
+------------------
+STORE INSTALLATION
+------------------
+After the installation of the portal, you can install a shop through the 'store/' folder:
+copy the content of the 'store/' folder on yopur server, where you want, 
+for example in /var/www/your-portal-dir/shop1:
+	
+	mkdir /var/www/your-portal-dir/shop1
+	cp -R Php-MultiShop/store/*   /var/www/your-portal-dir/shop1/
+
+Then, through a browser, go to the web installer interface at the 'install' directory
+and follow the instructions:
+	
+	http://your-webportal.com/shop1/install
+
+After the installation and configuration of your store, when a minimum quantity
+of content (as products, ...) is available, you can add (to link) the store to 
+the portal:
+go to the portal Administration Panel, in the Multi-Shop admin module,
+click on Shops/Stores, then add your new store.
+The Url for this operation is:
+	http://your-webportal.com/admin.php?op=shops
+when 'admin.php' is your admin file, that you can rename for security reason,
+edit the config.php file.
+After adding the new store, you should set some preferences and add further information
+by editing this store (click on 'edit' link).
+
+Note: in the Multi-Shop module there is a guide online to explain how to manage this module.
+
+
+----------------------------
+INSTALLATION OF OTHER STORES
+----------------------------
+If you want to install other store(s), simply repeat the 'STORE INSTALLATION'
+but in other folder on your server, for example in '/var/www/your-portal-dir/shop2/':
+
+	mkdir /var/www/your-portal-dir/shop2
+	cp -R Php-MultiShop/store/*   /var/www/your-portal-dir/shop2/
+
+
+====================
+FOR EXISTING PHPNUKE
+====================
+If you already have an PhpNuke portal and you want to install Php-MultiShop as Add-on, 
+read the file 'Multishop_as_Addon/README.txt'
+
+
+========
+FEEDBACK
+========
+I would like to receive some feedback with the problems that you will have found.
+Also if you want to contribute for translations, documentation or development,
+contact me directly or through the Forums on the official website:
+  http://php-multishop.com
+
+Good job,
+
+-- Piero Trono

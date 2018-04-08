@@ -1,0 +1,33 @@
+==============================================================================================
+Php-MultiShop 0.8, based on PHP-Nuke version 7.8 (with patch 3.1) and osCommerce Milestone 2.2
+==============================================================================================
+
+==========================
+CREDITS for  Php-MultiShop
+==========================
+
+* Php-MultiShop
+Copyright (c) 2003-2005 by Piero Trono
+http://php-multishop.com
+
+
+* PHP-Nuke
+Copyright (c) 2005 by Francisco Burzi
+http://phpnuke.org
+Note: Php-MultiShop is based on PHP-Nuke and osCommerce
+
+
+* osCommerce
+Copyright (c) osCommerce 2003-2005
+http://oscommerce.org
+Note: Php-MultiShop is based on PHP-Nuke and osCommerce
+
+
+* (chatserv) www.nukeresources.com & www.nukefixes.com
+Thanks for these teams for the security patc released
+for PhpNuke, then also for Php-MultiShop
+
+
+* Translations
+Thanks to all the people that translated PHP-Nuke, please see each
+translation file for credits.

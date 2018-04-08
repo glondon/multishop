@@ -1,0 +1,104 @@
+=====================
+Php-MultiShop Upgrade
+=====================
+
+# 1. Backup
+First all, is STRONGLY RECOMMENDED a backup of your DataBase and FileSystem.
+Important: save your existing config.php file, for example:
+	
+	cp config.php config.php.old
+
+
+# 2. Upgrade the PhpNuke DataBase
+To upgrade from previous PHP-Nuke versions,
+Select the correct upgrade-file from the 'upgrades-phpnuke/' folder.
+For example, to upgrade PHPNuke from 7.6 to 7.8 version, select the two files:
+	
+	upgrades-phpnuke/7.x/upgrade76-77.php
+	upgrades-phpnuke/7.x/upgrade77-78.php
+
+then, copy and run these files on your server:
+
+	http://your-webportal.com/upgrade76-77.php
+	
+	http://your-webportal.com/upgrade77-78.php
+	
+after, delete these files from your server.
+
+
+# 3. Upgrade the Php-MultiShop DataBase
+After the upgrade of PHPNuke, you must use the files included
+in 'Multishop_Upgrade/' folder to upgrade the Php-MultiShop DataBase.
+Go in 'Multishop_Upgrade/' folder, select the correct upgrade-file;
+copy and run this file on your sever.
+
+For example, to upgrade Php-MultiShop from 0.7 to 0.8 version, select the file:
+	
+	Multishop_Upgrade/multishop_upgrade07-08.php
+
+Copy and run this file on your server:
+
+	http://your-webportal.com/multishop_upgrade07-08.php
+
+after, delete this file from your server.
+
+
+# 4. Upload the new package
+Copy the old configuration (from the file config.php.old created at step #1)
+to the config.php file of the new package.
+
+COPY ALL THE CONTENT of 'portal/' folder on your server,
+without the 'portal/install' directory.
+
+IMPORTANT: remember to REMOVE the 'portal/install' directory.
+
+IMPORTANT NOTE:
+probably, some variables/constants of the old config.php file are missing in the new file:
+don't worry, it's right.
+
+IMPORTANT NOTE ABOUT CURRENCIES
+after upgraqde, remember to check your currencies through the new function "CURRENCIES"
+in the Multi-Shop admin module, then update the data if necessary
+(for example, set the default currency).
+
+
+# 5. If, after a brief testing, your portal works correctly,
+remove the file config.php.old
+
+
+# 6. ONLY from version 0.5 of php-multishop:
+delete the following (obsolete) files:
+
+ Nuke/html/admin/case/case.multishop.php
+ Nuke/html/admin/links/links.multishop.php
+ Nuke/html/admin/modules/multishop.php
+ 
+ Nuke/html/modules/Privacy (all)
+ Nuke/html/modules/Vendors (all)
+
+(note: since php-multishop version 0.6, the modules and the files above
+ has been replaced by the Multishop module)
+
+
+# 7. ONLY from version 0.5 of php-multishop:
+update of stores setting
+For every shop you must put the favourite setting:
+after the upgrade as default your shops not are allowed to show "Products", "Reviews",
+"Products Specials" and "Product Best" in the Nuke platform,
+then you can change these setting as you want with the admin module Multi-Shop.
+Go to:
+
+	http://your-webportal.com/admin.php?op=multishop
+
+then change the shops clicking on the respective "Edit" option.
+Also, the shop can be classified in "active", "external" and "inactive".
+  - active: shops with all the features, installed in the same server and DB of Phpnuke.
+  - external: shop installed in other DB or server; for these shops the users (customers) cannot keep the log-in.
+  - inactive: for any other shop (in progress, deactivated, waiting payment, ...);
+    in every blocks and modules of the phpnuke portal the shops set as "inactive"
+    will be not included, then not visible to the users/customers.
+Then, as the upgrade process set as default any shop as "active",
+you can change this setting.
+
+
+It's all...

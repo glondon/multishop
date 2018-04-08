@@ -1,0 +1,109 @@
+==============================================================================================
+Php-MultiShop 0.8, based on PHP-Nuke version 7.8 (with patch 3.1) and osCommerce Milestone 2.2
+==============================================================================================
+
+
+23 Nov 2005: Version 0.8
+========================
+- changes many files/functions of previous versions of multishop to improve the connection to the DataBase:
+  previously, there were two concurrent connections to the DB in the portal-side, now there is just one
+- created a function in the Multi-Shop admin module to manage the Currencies
+- added some functions to create a static list of the Categories of Products,
+  to increase the performance.
+- upgrade to PHPNuke 7.8 and Security Patch 3.1
+- added some functions in the Categories_Products module, to allow a search of products by category
+  (still in improvement)
+- added a long description of the functions of the Multi-Shop admin module:
+  a guide online to explain how to manage this module
+- fixd some errors in split_page_results.php (store-side)
+- improved the web-installers (portal-side and store-side)
+- changes all the content, like the footers, of the portal-side (based on PHPNuke) and the
+  store-side (based on osCommerce), to respect carefully the copyright notice of
+  Francisco Buzi (http://phpnuke.org) and the TradeMark Policy of osCommerce (http://oscommerce.org)
+- some other minor cleanups, fixes and improvements.
+
+
+31 May 2005: Version 0.7
+========================
+- created the Installer for the portal-side: an user-friendly web interface to install Php-MultiShop
+- improved the Installer for the store-side
+- upgrade to PhpNuke 7.6 (http://phpnuke.org)
+- applied Security Patch 3.0  (www.nukefixes.com & www.nukeresources.com)
+- created the 'Admin Access' package to protect with authentication account the admin area of each store
+- added a functionality and the 'header-rss.php' file to include into the HTML code a link to the RSS reader
+  to provide syndacations on products, stores, products in Special offer, etc.
+  header-rss.php
+- applied improvements to the 'multishop-code'
+- some other minor cleanups and fixes.
+
+
+18 March 2005: Version 0.6
+============================
+- upgrade to PhpNuke 7.5 (http://phpnuke.org)
+- applied Security Patch 2.9  (www.nukefixes.com & www.nukeresources.com)
+- create the new module 'Multishop'
+- removed modules Privacy and Vendors, replaced by Multishop module
+- removed the 'osC/catalog/admin/file_manager.php' in osCommerce side for a vulnerability issue:
+  this file allows a remote attacker to possibly gain access to sensitive information
+- create a classification of the Shop as: 'active', 'external' and 'inactive'
+  active: for the shops with all the features, installed in the same server and DB of Phpnuke.
+  external: shop installed in other DB or server, in which is not possible the unique login
+  inactive: for any other shop, as in progress, deactivated, waiting payment, ...
+- added a feature (in Multi-Shop admin module) to set what you want to show for every shop: Reviews, Products, Specials, Best Products
+- created a web script to allow the installation of Php-Multishop as Addon on existing PHPNuke (7.5 version or less)
+- added KEYWORDS and GENERATOR Meta-Tag in osCommerce side (only in the index.php file)
+- updated all the 'php-multishop' blocks and modules for the new features above
+- fixed some little issues in Multi-Shop admin module
+- Some other minor cleanups and fixes.
+
+
+4 November 2004: Version 0.5
+============================
+- upgrade to PhpNuke version 7.4
+- applied the Security Patch 2.6 released on 09/19/04 by www.nukeresources.com
+- some little changes in Categories_Products module.
+
+
+21 July 2004: Version 0.4
+=========================
+- upgrade to PhpNuke 7.3
+- applied Security Patch 2.5
+- added instructions to install Php-MultiShop as Add-on on existing PhpNuke portal
+- added script to upgrade Php-MultiShop from version 0.3 to 0.4
+- added the new block Product Best
+- added the new block Product Reviews
+- added the new block Product Specials
+- added vars and functionnalities in admin-multishop: tax rate, news in home with products, ...
+- changed Categories_Products to display and/or include the tax rate in the product price.
+- improved the Customers functions in osCommerce.
+- changed the News/index.php file to show in the same page: News, Products and Vendors.
+
+
+12 June 2004: Version 0.3
+=========================
+- applied the Security Patch 2.4 for PhpNuke.
+- applied the suggestions given by www.nukefixes.com & www.nukeresources.com for all the blocks and modules of Php-MultiShop.
+- deleted "sessions" table, replaced in every shop with his "PREFIXHOP_sessions".
+
+
+05 June 2004: Version 0.2
+=========================
+- changed the wizard installation of osCommerce to have a compatibility with the MultiShop platform.
+- added an automatic script in the wizard installation to personalize the PREFIXSHOP words into the oscommerce.sql file.
+- added 2 language (german and french) with all directories and files, for Phpnuke and osCommerce.
+- changes in few tables on DB (nuke_categories_products, nuke_vendors_details) to able the five languages.
+- written the file INSTALL_LANGUAGE: a guide to install a new language.
+- admin-modul multishop (Nuke/html/admin/modules/multishop.php): very improved the code.
+- block-Categories_Products.php improved for functinnalities.
+- block-Product_Random.php improved for functinnalities.
+- block-Select_Vendor.php improved for functinnalities.
+- modul Categories_Products: fixed some bugs, improved the code and added some variables in language/
+- modul Your_Account returned to the original version, through some change in others modules.
+- modul Vendors improved and fixed.
+- added a new variable in config function on MultiShop-admin-modul, to set the total products number
+- Some other minor cleanups and fixes.
+
+
+05 May 2004: Version 0.1
+========================
+First Release

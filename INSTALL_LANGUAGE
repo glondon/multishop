@@ -1,0 +1,95 @@
+Php-MultiShop, based on PHP-Nuke version 7.8 and osCommerce Milestone 2.2
+=========================================================================
+
+Version: multishop-devel-0.8
+----------------------------
+
+How to install a Language.
+----------------------------
+
+----
+Note
+----
+This is a brief guide to install a new language in MultiShop platform,
+but only in the PhpNuke portal, not in every shop.
+For the language in every shop (osCommerce), please visit the site
+http://www.oscommerce.org to download the language-pakage and to read the documentation.
+
+
+------------
+Instructions
+------------
+As default, the platform have 5 languages:
+1 - english
+2 - german
+3 - spanish
+4 - italian
+5 - french
+To install a new language (for example: 6 - russian), we have to change two tables
+in the DB, set a new variable in "Nuke/html/config.php" file, and after we can 
+copy every file of the package-translation, in every directory.
+
+
+1) Change the table nuke_categories_products:
+you must add the field `name_russian` in `nuke_categories_products`:
+`name_english` varchar(32) NOT NULL default ''
+For this operation we can use some Tool, as phpMyAdmin, or use directly the
+mysql command line below:
+
+ALTER TABLE nuke_categories_products ADD COLUMN name_russian varchar(32) NOT NULL default '';
+
+
+2) Change the table nuke_vendors_details:
+you must add two fields.
+`shop_russian` text,
+`prod_russian` text,
+
+and the command line is:
+
+ALTER TABLE nuke_vendors_details ADD COLUMN shop_russian text;
+ALTER TABLE nuke_vendors_details ADD COLUMN prod_russian text;
+
+
+3) Change the table nuke_content_static:
+
+ALTER TABLE nuke_content_static ADD COLUMN content_russian text;
+
+
+4) Now, you must asdd/set some variables in the file "config.php":
+add the new variable, for example:
+
+$lang_id['russian'] = 6;
+...
+Note:
+if you want to use only a language, for example spanish, you can delete every 
+variable language, then leave: $lang_id['spanish'] = 1;
+
+
+4) Copy the files of the package-translation, in every directory,
+for ex. for PhpNuke:
+
+Nuke/html/admin/language/lang-russian.php
+Nuke/html/includes/oscommerce/languages/russian.php
+Nuke/html/language/lang-russian.php
+Nuke/html/modules/Categories_Products/language/lang-russian.php
+Nuke/html/modules/Multishop/language/lang-russian.php
+Nuke/html/modules/Your_Account/language/lang-russian.php
+
+and the languages-files for every shop (store-side, based on osCommerce)
+
+5) Note: you can see the products in a language on the MultiShop platform,  
+only if there are the products descriptions in this language in the shops  
+with the same language_id
+(check, for every shop, this language_id in the table "PREFIXSHOP_products_description").
+
+
+--------------
+I would like to receive some feedback with the problems that you will have found.
+Also if you want to contribute for translations, documentation or development,
+contact me directly or through the Forums on the official website:
+  http://php-multishop.com
+
+
+Good job,
+
+-- Piero Trono
