@@ -13,7 +13,7 @@
   define('FILE_DEFAULT_MULTISHOP', 'http://www.mymultishop.com/index.php'); // 
   define('DOMAIN_MULTISHOP', ''); // e.g. www.mymultishop.com
   define('NAME_MULTISHOP', 'Multi-Shop'); // 
-  define('STORE_PREFIX', '');
+  define('STORE_PREFIX', 'hhh');
   $sitekey = "SdFk*fa28367-dm56w69.3a2fDS+e9";
 
 // Define the webserver and path parameters
@@ -44,9 +44,9 @@
 
 // define our database connection
   define('DB_SERVER', ''); // eg, localhost - should not be empty for productive servers
-  define('DB_SERVER_USERNAME', '');
+  define('DB_SERVER_USERNAME', 'root');
   define('DB_SERVER_PASSWORD', '');
-  define('DB_DATABASE', 'osCommerce');
+  define('DB_DATABASE', 'oscommerce');
   define('USE_PCONNECT', 'false'); // use persistent connections?
   define('STORE_SESSIONS', 'mysql'); // leave empty '' for default handler or set to 'mysql'
 ?>
