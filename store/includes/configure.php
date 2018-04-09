@@ -11,7 +11,7 @@
 */
 
   define('FILE_DEFAULT_MULTISHOP', 'http://www.mymultishop.com/index.php'); // 
-  define('DOMAIN_MULTISHOP', ''); // e.g. www.mymultishop.com
+  define('DOMAIN_MULTISHOP', 'http://multishop'); // e.g. www.mymultishop.com
   define('NAME_MULTISHOP', 'Multi-Shop'); // 
   define('STORE_PREFIX', 'hhh');
   $sitekey = "SdFk*fa28367-dm56w69.3a2fDS+e9";
@@ -19,7 +19,7 @@
 // Define the webserver and path parameters
 // * DIR_FS_* = Filesystem directories (local/physical)
 // * DIR_WS_* = Webserver directories (virtual/URL)
-  define('HTTP_SERVER', ''); // eg, http://localhost - should not be empty for productive servers
+  define('HTTP_SERVER', 'http://multishop'); // eg, http://localhost - should not be empty for productive servers
   define('HTTPS_SERVER', ''); // eg, https://localhost - should not be empty for productive servers
   define('ENABLE_SSL', false); // secure webserver for checkout procedure?
   define('HTTP_COOKIE_DOMAIN', '');

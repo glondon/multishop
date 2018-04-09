@@ -86,7 +86,7 @@ if (!function_exists("floatval")) {
 
 if ($phpver >= '4.0.4pl1' && isset($_SERVER['HTTP_USER_AGENT']) && strstr($_SERVER['HTTP_USER_AGENT'],'compatible')) {
   if (extension_loaded('zlib')) {
-    @ob_end_clean();
+    ob_end_clean();
     ob_start('ob_gzhandler');
   }
 } elseif ($phpver > '4.0' && isset($_SERVER['HTTP_ACCEPT_ENCODING']) && !empty($_SERVER['HTTP_ACCEPT_ENCODING'])) {
@@ -103,7 +103,7 @@ if ($phpver >= '4.0.4pl1' && isset($_SERVER['HTTP_USER_AGENT']) && strstr($_SERV
 }
 
 if (!ini_get('register_globals')) {
-  @import_request_variables("GPC", "");
+  //import_request_variables("GPC", "");
 }
 
 //Union Tap
@@ -220,12 +220,12 @@ if(defined('FORUM_ADMIN')) {
   define('INCLUDE_PATH', './');
 }
 
-@require_once(INCLUDE_PATH."config.php");
-@require_once(INCLUDE_PATH."db/db.php");
-@require_once(INCLUDE_PATH."includes/sql_layer.php");
-@require_once(INCLUDE_PATH."includes/ipban.php");
+require_once(INCLUDE_PATH."config.php");
+require_once(INCLUDE_PATH."db/db.php");
+require_once(INCLUDE_PATH."includes/sql_layer.php");
+require_once(INCLUDE_PATH."includes/ipban.php");
 if (file_exists(INCLUDE_PATH."includes/custom_files/custom_mainfile.php")) {
-  @include_once(INCLUDE_PATH."includes/custom_files/custom_mainfile.php");
+  include_once(INCLUDE_PATH."includes/custom_files/custom_mainfile.php");
 }
 
 if (!defined('FORUM_ADMIN')) {
@@ -239,10 +239,10 @@ if (!defined('FORUM_ADMIN')) {
 
 // Error reporting, to be set in config.php
 if($display_errors) {
-  @ini_set('display_errors', 1);
+  ini_set('display_errors', 1);
   error_reporting(E_ALL^E_NOTICE);
 } else {
-  @ini_set('display_errors', 0);
+  ini_set('display_errors', 0);
   error_reporting(0);
 }
 
