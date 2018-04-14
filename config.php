@@ -99,7 +99,7 @@ $lang_id["french"]  = 5;
 define("HTTP_SERVER", "http://multishop/"); // eg, http://www.yoursite.com/ - should not be NULL for productive servers
 define("HTTPS_SERVER", ""); // eg, https://www.yoursite.com/ - should not be NULL for productive servers
 define("ENABLE_SSL", false); // secure webserver for checkout procedure?
-define("DIR_FS_DOCUMENT_ROOT", "C:/xampp/htdocs/multishop"); // IMPORTANT: it's the absolut path on server where is located the current file
+define("DIR_FS_DOCUMENT_ROOT", "C:/xampp/htdocs/multishop/"); // IMPORTANT: it's the absolut path on server where is located the current file
 define("DIR_WS_INCLUDES", DIR_FS_DOCUMENT_ROOT . "includes/oscommerce/");
 
 define("ENTRY_FIRST_NAME_MIN_LENGTH", "3");
